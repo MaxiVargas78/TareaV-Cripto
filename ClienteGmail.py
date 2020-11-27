@@ -10,7 +10,7 @@ with open('Datos.txt') as d:
     EXPREG = datos[1]
     FECHA = datos[2] 
     print("Los datos a buscar son:")
-    print("DESTINATARIO: "+FROM+'\n'+'EXPRESION REGULAR: '+EXPREG+'\n'+'Fecha mas antigua de la Exp. Regular: '+FECHA+'\n')
+    print("REMITENTE: "+FROM+'\n'+'EXPRESION REGULAR: '+EXPREG+'\n'+'Fecha mas antigua de la Exp. Regular: '+FECHA+'\n')
 
 # Inicia sesion como cliente de correo electronico #
 imap_host = 'imap.gmail.com' 
