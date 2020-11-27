@@ -3,7 +3,7 @@ import pprint
 import re 
 from getpass import getpass
 
- # Abre el archivo con los datos necesarios para el análisis #
+ # Abre el archivo con los datos necesarios para el analisis #
 with open('Datos.txt') as d:
     datos = d.read().splitlines()
     FROM = datos[0]
@@ -12,7 +12,7 @@ with open('Datos.txt') as d:
     print("Los datos a buscar son:")
     print("DESTINATARIO: "+FROM+'\n'+'EXPRESION REGULAR: '+EXPREG+'\n'+'Fecha mas antigua de la Exp. Regular: '+FECHA+'\n')
 
-# Inicia sesion como cliente de correo electrónico #
+# Inicia sesion como cliente de correo electronico #
 imap_host = 'imap.gmail.com' 
 imap_user = str(raw_input('Ingrese su email:'))
 imap_pass = getpass('Ingrese su Password:')
@@ -21,7 +21,7 @@ imap.login(imap_user, imap_pass)
 imap.select('Inbox')
 tmp, data = imap.search(None,'(FROM "'+FROM+'")')
 
-# Función que analiza los Message-ID #
+# Funcion que analiza los Message-ID #
 for itera in data[0].split(): 
         tmp, data = imap.fetch(itera, '(BODY[HEADER.FIELDS (FROM MESSAGE-ID DATE)])')
         print('Numero de mensaje en la bandeja de entrada:{0}'.format(itera))
